@@ -120,7 +120,10 @@ export default function SubmissionDetailModal({
     return (
       <Dialog open={open} onOpenChange={onOpenChange}>
         <DialogContent>
-          <div className="text-center text-gray-400">Loading...</div>
+          <DialogHeader>
+            <DialogTitle>로딩 중...</DialogTitle>
+          </DialogHeader>
+          <div className="text-center text-gray-400 py-4">로딩 중...</div>
         </DialogContent>
       </Dialog>
     )
@@ -159,7 +162,7 @@ export default function SubmissionDetailModal({
             <h4 className="text-sm font-semibold text-gray-300">AI Analysis</h4>
             <div className="space-y-4">
               <ScoreBar label="가독성" value={displayData.readabilityScore} />
-              <ScoreBar label="예술성" value={displayData.creativityScore} />
+              <ScoreBar label="창의성" value={displayData.creativityScore} />
               <ScoreBar label="광기" value={displayData.inefficiencyScore} />
             </div>
             <div className="space-y-2">
