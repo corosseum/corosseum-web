@@ -11,13 +11,13 @@ export default function Header() {
           </Link>
           <nav className="flex gap-4 sm:gap-6">
             <Link to="/gallery" className="text-sm sm:text-base text-gray-300 hover:text-white">
-              Gallery
+              퀘스트 목록
             </Link>
             <Link to="/leaderboard" className="text-sm sm:text-base text-gray-300 hover:text-white">
-              Leaderboard
+              리더보드
             </Link>
             <Link to="/hall-of-fame" className="text-sm sm:text-base text-gray-300 hover:text-white">
-              Hall of Fame
+              명예의 전당
             </Link>
           </nav>
         </div>

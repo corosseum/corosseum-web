@@ -81,11 +81,11 @@ export default function Leaderboard() {
   return (
     <div className="container mx-auto px-4 py-8 max-w-4xl">
       <div className="space-y-6">
-        <h1 className="text-2xl font-bold text-white">Leaderboard</h1>
+        <h1 className="text-2xl font-bold text-white">리더보드</h1>
 
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
           <TabsList className="grid w-full grid-cols-2">
-            <TabsTrigger value="today">오늘의 리더보드</TabsTrigger>
+            <TabsTrigger value="today">오늘의 TOP 10</TabsTrigger>
             <TabsTrigger value="yesterday">어제의 TOP 10</TabsTrigger>
           </TabsList>
 
