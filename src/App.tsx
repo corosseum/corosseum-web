@@ -7,6 +7,7 @@ import QuestDetail from './pages/QuestDetail'
 import Leaderboard from './pages/Leaderboard'
 import HallOfFame from './pages/HallOfFame'
 import Header from './components/Header'
+import Footer from './components/Footer'
 
 function App() {
   const { isLoading } = useAuth()
@@ -21,15 +22,18 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className="min-h-screen bg-gray-900">
+      <div className="min-h-screen bg-gray-900 flex flex-col">
         <Header />
-        <Routes>
-          <Route path="/" element={<Arena />} />
-          <Route path="/gallery" element={<Gallery />} />
-          <Route path="/gallery/:questId" element={<QuestDetail />} />
-          <Route path="/leaderboard" element={<Leaderboard />} />
-          <Route path="/hall-of-fame" element={<HallOfFame />} />
-        </Routes>
+        <main className="flex-1">
+          <Routes>
+            <Route path="/" element={<Arena />} />
+            <Route path="/gallery" element={<Gallery />} />
+            <Route path="/gallery/:questId" element={<QuestDetail />} />
+            <Route path="/leaderboard" element={<Leaderboard />} />
+            <Route path="/hall-of-fame" element={<HallOfFame />} />
+          </Routes>
+        </main>
+        <Footer />
         <Toaster position="top-right" theme="dark" />
       </div>
     </BrowserRouter>
